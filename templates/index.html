@@ -25,8 +25,14 @@
         .hero{
             height: 100vh;
             max-width: 100vw;
-            background: url('https://i.pinimg.com/originals/b0/8b/84/b08b8418f4e7beb736978e16ae7489f8.jpg');
+            background: url('https://images.unsplash.com/photo-1512580770426-cbed71c40e94?ixlib=rb-1.2.1&w=1000&q=80');
             background-size: cover;
+        }
+        .hero .black-layer{
+            background: rgba(0,0,0,.4);
+            height: 100vh;
+            width: 100vw;
+            position: absolute;
         }
         .hero .container{
             height: inherit;
@@ -35,6 +41,7 @@
             /* align-items: center; */
             flex-direction: column;
             color: white;
+            z-index: 8;
         }
         .about{
             height: 100vh;
@@ -91,6 +98,7 @@
 
 
     <div class="hero" id="hero">
+        <div class="black-layer"></div>
         <div class="container">
             <h1 class="heading display-1">Back-2-School</h1>
             <p class="lead">
