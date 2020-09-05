@@ -33,6 +33,7 @@
             height: 100vh;
             width: 100vw;
             position: absolute;
+            z-index: 1;
         }
         .hero .container{
             height: inherit;
@@ -41,7 +42,7 @@
             /* align-items: center; */
             flex-direction: column;
             color: white;
-            z-index: 8;
+            z-index: 5;
         }
         .about{
             height: 100vh;
@@ -64,6 +65,12 @@
             font-size: 5rem;
             z-index: 99;
         }
+        .hero .lead{
+            z-index: 5;
+        }
+        .ctas{
+            z-index: 5;
+        }
         .ctas button{
             padding: 16px 32px;
             font-size: 1.5rem;
@@ -73,29 +80,7 @@
 
 <body>
 
-    <nav class="navbar navbar-expand-sm navbar-dark fixed-top">
-        <a class="navbar-brand" href="#hero">Back-2-School</a>
-        <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
-            aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="collapsibleNavId">
-            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#hero">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#about">About</a>
-                </li>
-            </ul>
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="text" placeholder="Search">
-                <button class="btn btn-light my-2 my-sm-0" type="submit">Search</button>
-            </form>
-        </div>
-    </nav>
-
-
+    {% include('./includes/navbar.html') %}
 
     <div class="hero" id="hero">
         <div class="black-layer"></div>
@@ -120,9 +105,6 @@
             <p class="lead" style="text-align: end;">We use whatsapp messaging to track all your deadlines <br> <b>&</b> notify you accordingly :))</p>
         </div>
     </div>
-
-
-
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
